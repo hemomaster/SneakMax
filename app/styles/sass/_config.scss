@@ -1,0 +1,59 @@
+// variable colors
+$accent: orange; // Accent Color
+$textcolor: #333; // Text Color
+
+// font variables
+$userfont: "roboto-oh5", sans-serif; // User Font Family
+$fontsize: 16px; // Body Font Size
+$fontweight: 400; // Body Font Weight
+$lineheight: 1.65; // Document Line Height
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+//EXTENSIONS AND MIXINS SECTION
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    src: url($furl) format("woff2");
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    font-display: swap;
+  }
+}
+
+%x-center {
+  margin: 0 auto;
+}
+
+%d-block {
+  display: block;
+}
+
+%d-flex {
+  display: flex;
+  align-items: center;
+}
+
+%crop-text-3 {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// FONTS LOAD SECTION
+@include font(
+  "roboto-oh5",
+  normal,
+  400,
+  "../fonts/roboto-regular-webfont.woff2"
+);
