@@ -1,0 +1,14 @@
+.title {
+  @extend %font-intro-bold;
+  font-size: fz(xl);
+  line-height: 100%;
+  color: clr(text-color);
+
+  &--white {
+    color: clr(white-color);
+  }
+
+  &--main {
+    font-size: fz(xxl);
+  }
+}

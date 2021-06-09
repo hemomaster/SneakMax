@@ -19,8 +19,8 @@ body {
 }
 
 ::selection {
-  background-color: $accent;
-  color: #fff;
+  background-color: clr(accent-color);
+  color: clr(white-color);
 }
 
 input,
@@ -52,22 +52,23 @@ img {
 }
 
 body {
-  font-family: $userfont;
-  font-size: $fontsize;
+  @extend %font-intro-book;
+  font-size: fz(sm);
   line-height: $lineheight;
-  font-weight: $fontweight;
-  color: $textcolor;
+  color: clr(text-color);
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
 }
 
 .btn-reset {
-  display: inline-block;
+  // display: inline-block;
   text-align: center;
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  color: currentColor;
 }
 
 .list-reset {
@@ -78,8 +79,9 @@ body {
 
 .icon {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 1em;
+  height: 1em;
+  object-fit: cover;
   fill: currentColor;
 }
 
@@ -92,4 +94,16 @@ body {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+.container {
+  max-width: $container-width + $container-padding * 2;
+  padding: 0 $container-padding;
+  @extend %x-center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $grid-gap;
 }

@@ -1,0 +1,13 @@
+.logo {
+  @extend %d-flex;
+
+  &__link {
+    @extend %font-intro-bold;
+    font-size: fz(xl);
+    line-height: 100%;
+
+    &:hover {
+      color: currentColor;
+    }
+  }
+}

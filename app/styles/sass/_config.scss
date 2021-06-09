@@ -1,13 +1,49 @@
 // variable colors
-$accent: orange; // Accent Color
-$textcolor: #333; // Text Color
+$colors: (
+  white-color: #fff,
+  black-color: #000,
+  accent-color: #f14f4f,
+  text-color: #444b58,
+  east-color: #484283,
+  cameo-color: #dbbba9,
+  seashell-color: #fff4ee,
+  bombay-color: #b2b5bb,
+  mojo-color: #cc4949,
+);
 
 // font variables
+$ffamily: (
+  inbook: "Intro Book",
+  inregular: "Intro Regular",
+  inbold: "Intro Bold",
+);
+
+$fsize: (
+  xs: 14px,
+  sm: 16px,
+  md: 20px,
+  lg: 24px,
+  xl: 30px,
+  xxl: 36px,
+);
+
+$fweidth: (
+  regular: 400,
+  bold: 700,
+);
+
+$lineheight: 140%; // Document Line Height
 $userfont: "roboto-oh5", sans-serif; // User Font Family
-$fontsize: 16px; // Body Font Size
-$fontweight: 400; // Body Font Weight
-$lineheight: 1.65; // Document Line Height
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+//container variables
+$container-width: 1180px;
+$container-padding: 15px;
+
+// grid
+$grid-gap: 20px;
+
+$main-offset: 40px;
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px;
@@ -20,16 +56,6 @@ $gutter: $grid-gutter-width;
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
 //EXTENSIONS AND MIXINS SECTION
-@mixin font($fname, $fstyle, $fweight, $furl) {
-  @font-face {
-    src: url($furl) format("woff2");
-    font-family: $fname;
-    font-style: $fstyle;
-    font-weight: $fweight;
-    font-display: swap;
-  }
-}
-
 %x-center {
   margin: 0 auto;
 }
@@ -50,10 +76,85 @@ $gutter: $grid-gutter-width;
   overflow: hidden;
 }
 
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    src: url($furl) format("woff2");
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    font-display: swap;
+  }
+}
+
+@function clr($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn ">>>Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@function ff($key) {
+  @if map-has-key($ffamily, $key) {
+    @return map-get($ffamily, $key);
+  }
+  @warn ">>>Unknown `#{$key}` in $ffamily.";
+  @return null;
+}
+
+// Возвращает значение font-size по ключу
+// из ассоциативного массива $fontsize
+@function fz($key) {
+  @if map-has-key($fsize, $key) {
+    @return map-get($fsize, $key);
+  }
+  @warn ">>>Unknown `#{$key}` in $fsize.";
+  @return null;
+}
+
+// Возвращает значение font-weidth по ключу
+// из ассоциативного массива $fontweidth
+@function fw($key) {
+  @if map-has-key($fweidth, $key) {
+    @return map-get($fweidth, $key);
+  }
+  @warn ">>>Unknown `#{$key}` in $fweidth.";
+  @return null;
+}
+
 // FONTS LOAD SECTION
 @include font(
-  "roboto-oh5",
+  ff(inbook),
   normal,
-  400,
-  "../fonts/roboto-regular-webfont.woff2"
+  fw(regular),
+  "../fonts/intro-book-webfont.woff2"
 );
+
+@include font(
+  ff(inregular),
+  normal,
+  fw(regular),
+  "../fonts/intro-regular-webfont.woff2"
+);
+
+@include font(
+  ff(inbold),
+  normal,
+  fw(bold),
+  "../fonts/intro-bold-webfont.woff2"
+);
+
+%font-intro-book {
+  font-family: #{ff(inbook)}, sans-serif;
+  font-weight: fw(regular);
+}
+
+%font-intro-bold {
+  font-family: #{ff(inbold)}, sans-serif;
+  font-weight: fw(bold);
+}
+
+%font-intro-regular {
+  font-family: #{ff(inregular)}, sans-serif;
+  font-weight: fw(regular);
+}

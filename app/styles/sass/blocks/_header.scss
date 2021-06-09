@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: clr(white-color);
+  background-color: clr(east-color);
+  z-index: 10;
+
+  &__container {
+    height: 65px;
+    border-bottom: 1px solid rgba(clr(white-color), 0.5);
+  }
+
+  &__logo {
+    grid-column: 2 span;
+  }
+
+  &__right {
+    grid-column: 10 span;
+    @extend %d-flex;
+    justify-content: flex-end;
+  }
+
+  &__right-cart {
+    margin-left: $main-offset;
+  }
+}

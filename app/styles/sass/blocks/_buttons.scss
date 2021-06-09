@@ -1,0 +1,19 @@
+.btn {
+  @extend %font-intro-regular;
+  font-size: fz(sm);
+  line-height: 100%;
+  padding: 22px 48px;
+  white-space: nowrap;
+  border-radius: 4px;
+  transition: background-color 0.25s ease-out;
+
+  &--primary {
+    color: clr(white-color);
+    background-color: clr(accent-color);
+
+    &:hover {
+      background-color: clr(mojo-color);
+      transition: background-color 0.25s ease-out;
+    }
+  }
+}
