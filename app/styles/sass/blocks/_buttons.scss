@@ -5,15 +5,31 @@
   padding: 22px 48px;
   white-space: nowrap;
   border-radius: 4px;
+  color: clr(white-color);
   transition: background-color 0.25s ease-out;
 
   &--primary {
-    color: clr(white-color);
     background-color: clr(accent-color);
+    transition: background-color 0.25s ease-out;
 
     &:hover {
       background-color: clr(mojo-color);
       transition: background-color 0.25s ease-out;
     }
+  }
+
+  &--dark {
+    background-color: clr(text-color);
+    transition: background-color 0.25s ease-out;
+
+    &:hover {
+      background-color: clr(tuna-color);
+      transition: background-color 0.25s ease-out;
+    }
+  }
+
+  &--none {
+    padding: 0;
+    color: clr(text-color);
   }
 }

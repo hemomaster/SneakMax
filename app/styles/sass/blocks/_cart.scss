@@ -17,14 +17,17 @@
   }
 
   &__btn-qty {
+    @extend %d-flex;
+    justify-content: center;
     position: absolute;
     bottom: -6px;
     right: 0;
-    width: 16px;
-    height: 16px;
+    min-width: 18px;
+    height: 18px;
     font-size: 14px;
-    line-height: 100%;
-    border-radius: 16px;
+    line-height: 14px;
+    border-radius: 8px;
+    padding: 2px;
     background-color: clr(accent-color);
   }
 }

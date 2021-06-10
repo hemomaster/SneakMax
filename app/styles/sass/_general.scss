@@ -102,8 +102,36 @@ body {
   @extend %x-center;
 }
 
+.section {
+  padding: $big-offset 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: $grid-gap;
+}
+
+.custom-checkbox {
+  @include custom-checkbox;
+
+  &__content {
+    padding-left: 34px;
+
+    &::before {
+      top: -2px;
+      width: 24px;
+      height: 24px;
+      border-color: clr(cameo-color);
+      border-radius: 4px;
+    }
+
+    &::after {
+      top: -2px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/src/check.svg");
+      background-size: 15px 12px;
+    }
+  }
 }

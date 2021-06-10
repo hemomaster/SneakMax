@@ -1,0 +1,46 @@
+.catalog {
+  &__title {
+    margin-bottom: $main-offset;
+  }
+
+  &__aside {
+    grid-column: 3 span;
+
+    &-wrapper {
+      background-color: clr(seashell-color);
+      padding: $second-offset;
+      border-radius: 4px;
+    }
+
+    &-title {
+      font-size: fz(lg);
+      line-height: 100%;
+      margin-bottom: $second-offset;
+    }
+
+    &-btn:not(:last-child) {
+      margin-bottom: $second-offset;
+    }
+  }
+
+  &__filter {
+    margin-bottom: $second-offset;
+
+    &-name {
+      @extend %d-block;
+      font-weight: fw(regular);
+      margin-bottom: $small-offset;
+    }
+
+    &-body {
+      &--flex {
+        @extend %d-flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__content {
+    grid-column: 9 span;
+  }
+}

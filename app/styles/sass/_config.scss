@@ -9,6 +9,7 @@ $colors: (
   seashell-color: #fff4ee,
   bombay-color: #b2b5bb,
   mojo-color: #cc4949,
+  tuna-color: #31343c,
 );
 
 // font variables
@@ -42,7 +43,9 @@ $container-padding: 15px;
 
 // grid
 $grid-gap: 20px;
-
+$small-offset: 10px;
+$second-offset: 20px;
+$big-offset: 60px;
 $main-offset: 40px;
 
 // Bootstrap compatible gutter variable => $gutter
