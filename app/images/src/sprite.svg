@@ -1,12 +1,12 @@
-<svg width="0" height="0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-	<symbol viewBox="0 0 20 19" id="icon-cart">
-		<path d="M20 6.579h-3.396L13.036.319a.608.608 0 00-.858-.225.678.678 0 00-.214.902l3.182 5.583H4.854L8.036.996a.678.678 0 00-.214-.902.608.608 0 00-.858.225L3.396 6.58H0v1.316h1.357l1.587 8.915c.166.934.941 1.611 1.844 1.611h10.424c.902 0 1.678-.677 1.843-1.61l1.588-8.916H20V6.579zm-4.174 9.99a.634.634 0 01-.614.536H4.788a.634.634 0 01-.615-.537L2.628 7.895h14.744l-1.546 8.674z">
+<svg width="0" height="0" class="hidden">
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 26" id="icon-cart">
+		<path d="M28 9.286h-4.755L18.25.45a.847.847 0 00-1.2-.319c-.415.264-.549.835-.3 1.274l4.455 7.88H6.795l4.455-7.88c.249-.44.115-1.01-.3-1.274-.416-.264-.952-.12-1.2.319L4.755 9.286H0v1.857h1.9l2.222 12.584C4.354 25.044 5.44 26 6.702 26h14.595c1.263 0 2.348-.956 2.58-2.273l2.224-12.584H28V9.286zm-5.843 14.1c-.077.439-.438.757-.86.757H6.703c-.422 0-.783-.318-.86-.758L3.678 11.143H24.32l-2.164 12.243z">
 		</path>
 	</symbol>
-	<symbol fill="none" viewBox="0 0 30 30" id="icon-show">
-		<path clip-rule="evenodd" d="M18.952 15.066a3.952 3.952 0 11-7.904-.001 3.952 3.952 0 017.904.001z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20" id="icon-show">
+		<path clip-rule="evenodd" d="M16.952 10.066a3.952 3.952 0 11-7.904-.001 3.952 3.952 0 017.904.001z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 		</path>
-		<path clip-rule="evenodd" d="M14.998 24.194c4.76 0 9.113-3.423 11.565-9.128C24.11 9.361 19.758 5.94 14.998 5.94h.005c-4.76 0-9.114 3.422-11.566 9.127 2.452 5.705 6.806 9.128 11.566 9.128h-.005z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+		<path clip-rule="evenodd" d="M12.998 19.194c4.76 0 9.113-3.423 11.565-9.128C22.11 4.361 17.758.94 12.998.94h.005c-4.76 0-9.114 3.422-11.566 9.127 2.452 5.705 6.805 9.128 11.566 9.128h-.005z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 		</path>
 	</symbol>
 </svg>

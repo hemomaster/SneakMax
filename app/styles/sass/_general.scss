@@ -56,6 +56,7 @@ body {
   font-size: fz(sm);
   line-height: $lineheight;
   color: clr(text-color);
+  background-color: clr(white-color);
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
@@ -103,7 +104,7 @@ body {
 }
 
 .section {
-  padding: $big-offset 0;
+  margin-bottom: $big-offset;
 }
 
 .grid {
