@@ -14,6 +14,7 @@ const rename = require("gulp-rename");
 const newer = require("gulp-newer");
 const rsync = require("gulp-rsync");
 const del = require("del");
+const sourcemaps = require("gulp-sourcemaps");
 
 function browsersync() {
   browserSync.init({
@@ -29,7 +30,7 @@ function browsersync() {
 }
 
 function scripts() {
-  return src(["app/js/*.js", "!app/js/*.min.js"])
+  return src(["app/js/**/*.js", "!app/js/*.min.js"])
     .pipe(
       webpack({
         mode: "production",
@@ -62,6 +63,7 @@ function styles() {
     `app/styles/${preprocessor}/*.*`,
     `!app/styles/${preprocessor}/_*.*`,
   ])
+    .pipe(sourcemaps.init())
     .pipe(eval(`${preprocessor}glob`)())
     .pipe(eval(preprocessor)())
     .pipe(
@@ -73,6 +75,7 @@ function styles() {
       })
     )
     .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.write("."))
     .pipe(dest("app/css"))
     .pipe(browserSync.stream());
 }

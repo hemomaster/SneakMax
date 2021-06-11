@@ -1,6 +1,6 @@
 <!--
-  https://youtu.be/GWZ6MjWlz1w?list=PLCMvV-acWe2C6jDUnjs5SgSrgxbAVQu9G&t=2
- -->
+https://youtu.be/GWZ6MjWlz1w?t=1491
+-->
 <section class="section catalog">
   <div class="container">
     <h2 class="title catalog__title">Каталог</h2>
@@ -10,9 +10,12 @@
           <h3 class="catalog__aside-title">Подбор по&nbsp;параметрам</h3>
           <div class="catalog__filter">
             <strong class="catalog__filter-name">Цена, руб</strong>
-            <div class="catalog__filter-body">
-              <input type="text" class="catalog__filter-price" />
-              <input type="text" class="catalog__filter-price" />
+            <div class="catalog__filter-body price-filter">
+              <div class="price-filter__wrapper">
+                <input type="text" class="price-filter__field" id="input-0" />
+                <input type="text" class="price-filter__field" id="input-1" />
+              </div>
+              <div class="price-filter__slide" id="range-slider"></div>
             </div>
           </div>
           <div class="catalog__filter">
@@ -32,6 +35,9 @@
             <strong class="catalog__filter-name">Размер</strong>
             <div class="catalog__filter-body">
               <table class="sizes-table">
+                <caption class="visually-hidden">
+                  Таблица размеров
+                </caption>
                 <tbody>
                   <tr>
                     <td>35</td>
@@ -52,12 +58,16 @@
               </table>
             </div>
           </div>
-          <button class="btn-reset btn btn--dark catalog__aside-btn">
-            Применить
-          </button>
-          <button class="btn-reset btn btn--none catalog__aside-btn">
-            сбросить
-          </button>
+          <div class="catalog__filter-control">
+            <button
+              class="btn-reset btn btn--dark btn--fluid catalog__filter-btn"
+            >
+              Применить
+            </button>
+            <button class="btn-reset btn btn--none catalog__filter-btn">
+              сбросить
+            </button>
+          </div>
         </div>
       </aside>
       <div class="catalog__content">
@@ -378,6 +388,9 @@
             </article>
           </li>
         </ul>
+        <button class="btn-reset btn btn--primary catalog__content-btn">
+          Показать еще
+        </button>
       </div>
     </div>
   </div>

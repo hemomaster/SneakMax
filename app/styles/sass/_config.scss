@@ -45,8 +45,8 @@ $container-padding: 15px;
 $grid-gap: 20px;
 $small-offset: 10px;
 $second-offset: 20px;
-$big-offset: 60px;
 $main-offset: 40px;
+$big-offset: 60px;
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px;
@@ -57,6 +57,7 @@ $gutter: $grid-gutter-width;
 @import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import "node_modules/nouislider/dist/nouislider";
 
 //EXTENSIONS AND MIXINS SECTION
 %x-center {

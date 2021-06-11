@@ -8,17 +8,13 @@
 
     &-wrapper {
       background-color: clr(seashell-color);
-      padding: $second-offset;
+      padding: $second-offset $second-offset $small-offset;
       border-radius: 4px;
     }
 
     &-title {
       font-size: fz(lg);
       line-height: 100%;
-      margin-bottom: $second-offset;
-    }
-
-    &-btn:not(:last-child) {
       margin-bottom: $second-offset;
     }
   }
@@ -38,9 +34,24 @@
         justify-content: space-between;
       }
     }
+
+    &-control {
+      @extend %d-flex;
+      flex-direction: column;
+    }
+
+    &-btn:not(:last-child) {
+      margin-bottom: $small-offset;
+    }
   }
 
   &__content {
     grid-column: 9 span;
+    @extend %d-flex;
+    flex-direction: column;
+
+    &-btn {
+      margin-top: $main-offset;
+    }
   }
 }

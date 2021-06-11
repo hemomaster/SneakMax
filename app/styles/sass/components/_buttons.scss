@@ -28,8 +28,12 @@
     }
   }
 
+  &--fluid {
+    width: 100%;
+  }
+
   &--none {
-    padding: 0;
+    padding: 10px;
     color: clr(text-color);
   }
 }

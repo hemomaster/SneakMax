@@ -1,0 +1,18 @@
+.sizes-table {
+  width: 100%;
+
+  caption {
+    pointer-events: none;
+  }
+
+  td {
+    @extend %font-intro-book;
+    font-size: fz(sm);
+    line-height: 1;
+    color: clr(text-color);
+    text-align: center;
+    padding: 17px 5px;
+    border-collapse: collapse;
+    border: 1px solid clr(cameo-color);
+  }
+}
