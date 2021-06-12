@@ -1,6 +1,7 @@
 .btn {
   @extend %font-intro-regular;
   font-size: fz(sm);
+  font-weight: fw(regular);
   line-height: 100%;
   padding: 22px 48px;
   white-space: nowrap;
@@ -24,6 +25,18 @@
 
     &:hover {
       background-color: clr(tuna-color);
+      transition: background-color 0.25s ease-out;
+    }
+  }
+
+  &--default {
+    padding: 17px 44px;
+    color: clr(text-color);
+    border: 1px solid currentColor;
+
+    &:hover {
+      color: clr(white-color);
+      background-color: clr(text-color);
       transition: background-color 0.25s ease-out;
     }
   }

@@ -10,6 +10,7 @@ $colors: (
   bombay-color: #b2b5bb,
   mojo-color: #cc4949,
   tuna-color: #31343c,
+  gray-color: #808081,
 );
 
 // font variables
@@ -43,10 +44,10 @@ $container-padding: 15px;
 
 // grid
 $grid-gap: 20px;
-$small-offset: 10px;
-$second-offset: 20px;
-$main-offset: 40px;
 $big-offset: 60px;
+$main-offset: 40px;
+$second-offset: 20px;
+$small-offset: 10px;
 
 $degrees: 15deg;
 
