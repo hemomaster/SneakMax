@@ -1,18 +1,28 @@
 .about {
+  position: relative;
   min-height: 580px;
   height: 1px;
   background-color: clr(east-color);
 
   &__container {
     height: 100%;
-    @extend %d-flex;
-    justify-content: space-around;
+    padding-right: 50px;
   }
+
+  &__wrapper {
+    height: 100%;
+    @extend %d-flex;
+    justify-content: center;
+  }
+
   &__content {
-    flex: 0 0 455px;
+    flex: 0 0 36%;
     width: 100%;
     color: clr(white-color);
+    margin-left: 0;
+    margin-right: auto;
   }
+
   &__title {
     margin-bottom: $second-offset;
   }
@@ -25,7 +35,6 @@
       @extend %d-block;
       max-width: 380px;
       text-align: left;
-      line-height: 1;
       quotes: none;
       margin-bottom: $second-offset;
     }
@@ -50,12 +59,14 @@
   }
 
   &__media {
+    flex-shrink: 0;
     position: relative;
     width: 524.5px;
     height: 100%;
     transform: skewX(-$degrees) translateX(-5%);
     border-radius: 10px;
     background-color: clr(bombay-color);
+    margin-left: -100px;
     overflow: hidden;
 
     &-img {
@@ -67,5 +78,14 @@
       object-fit: cover;
       transform: skewX($degrees) translateX(-50%);
     }
+  }
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 550px;
+    height: 424px;
+    object-fit: cover;
   }
 }
