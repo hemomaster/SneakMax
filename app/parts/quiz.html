@@ -1,76 +1,134 @@
 <section class="section quiz">
   <div class="container">
     <h2 class="visually-hidden">Подбор обуви</h2>
-    <div class="quiz__content active">
+    <div class="quiz__content">
       <div class="quiz__header">
         <h3 class="title quiz__header-title">
-          Мы подберем идеальную пару для вас
+          Мы&nbsp;подберем идеальную пару для вас
         </h3>
-        Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас
-        моделями
+        Ответьте на&nbsp;три вопроса и&nbsp;мы&nbsp;вышлем каталог с&nbsp;самыми
+        подходящими для вас моделями
       </div>
       <div class="quiz__body">
-        <h4 class="quiz__quiz__body-question">
-          Какой тип кроссовок рассматриваете?
-        </h4>
-        <ul class="list-reset grid quiz__body-answers">
-          <li class="quiz__body-answer">
-            <img
-              src="./images/dist/quiz-1-1.jpg"
-              alt="image"
-              class="quiz__body-answer-img"
-            />
-            <div class="quiz__body-answer-content">
-              <label class="custom-checkbox">
-                <input type="checkbox" class="custom-checkbox__field" />
-                <span class="custom-checkbox__content">кеды</span>
-              </label>
-            </div>
-          </li>
-          <li class="quiz__body-answer">
-            <img
-              src="./images/dist/quiz-1-1.jpg"
-              alt="image"
-              class="quiz__body-answer-img"
-            />
-            <div class="quiz__body-answer-content">
-              <label class="custom-checkbox">
-                <input type="checkbox" class="custom-checkbox__field" />
-                <span class="custom-checkbox__content">кеды</span>
-              </label>
-            </div>
-          </li>
-          <li class="quiz__body-answer">
-            <img
-              src="./images/dist/quiz-1-1.jpg"
-              alt="image"
-              class="quiz__body-answer-img"
-            />
-            <div class="quiz__body-answer-content">
-              <label class="custom-checkbox">
-                <input type="checkbox" class="custom-checkbox__field" />
-                <span class="custom-checkbox__content">кеды</span>
-              </label>
-            </div>
-          </li>
-          <li class="quiz__body-answer">
-            <img
-              src="./images/dist/quiz-1-1.jpg"
-              alt="image"
-              class="quiz__body-answer-img"
-            />
-            <div class="quiz__body-answer-content">
-              <label class="custom-checkbox">
-                <input type="checkbox" class="custom-checkbox__field" />
-                <span class="custom-checkbox__content">кеды</span>
-              </label>
-            </div>
-          </li>
-        </ul>
+        <h4 class="quiz__body-question">Какой тип кроссовок рассматриваете?</h4>
+        <div class="quiz-type quiz__body-answer">
+          <ul class="list-reset grid quiz-type__answers">
+            <li class="quiz-type__answer">
+              <img
+                src="./images/dist/quiz-1-1.jpg"
+                alt="image"
+                class="quiz-type__answer-img"
+              />
+              <div class="quiz-type__answer-content">
+                <label class="custom-checkbox">
+                  <input type="checkbox" class="custom-checkbox__field" />
+                  <span class="custom-checkbox__content">кеды</span>
+                </label>
+              </div>
+            </li>
+            <li class="quiz-type__answer">
+              <img
+                src="./images/dist/quiz-1-1.jpg"
+                alt="image"
+                class="quiz-type__answer-img"
+              />
+              <div class="quiz-type__answer-content">
+                <label class="custom-checkbox">
+                  <input type="checkbox" class="custom-checkbox__field" />
+                  <span class="custom-checkbox__content">кеды</span>
+                </label>
+              </div>
+            </li>
+            <li class="quiz-type__answer">
+              <img
+                src="./images/dist/quiz-1-1.jpg"
+                alt="image"
+                class="quiz-type__answer-img"
+              />
+              <div class="quiz-type__answer-content">
+                <label class="custom-checkbox">
+                  <input type="checkbox" class="custom-checkbox__field" />
+                  <span class="custom-checkbox__content">кеды</span>
+                </label>
+              </div>
+            </li>
+            <li class="quiz-type__answer">
+              <img
+                src="./images/dist/quiz-1-1.jpg"
+                alt="image"
+                class="quiz-type__answer-img"
+              />
+              <div class="quiz-type__answer-content">
+                <label class="custom-checkbox">
+                  <input type="checkbox" class="custom-checkbox__field" />
+                  <span class="custom-checkbox__content">кеды</span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="quiz__footer">
         <div class="quiz__footer-counter">
           <span class="quiz__footer-qty">1</span>из<span
+            class="quiz__footer-qty"
+            >3</span
+          >
+        </div>
+        <button class="btn-reset btn btn--default quiz__footer-btn">
+          Следующий шаг
+        </button>
+      </div>
+    </div>
+    <div class="quiz__content active">
+      <div class="quiz__header">
+        <h3 class="title quiz__header-title">
+          Мы&nbsp;подберем идеальную пару для вас
+        </h3>
+        Ответьте на&nbsp;три вопроса и&nbsp;мы&nbsp;вышлем каталог с&nbsp;самыми
+        подходящими для вас моделями
+      </div>
+      <div class="quiz__body quiz__body--second">
+        <h4 class="quiz__body-question">Какой размер вам подойдет?</h4>
+        <div class="quiz-size quiz__body-answer">
+          <ul class="list-reset grid quiz-size__answers">
+            <li class="quiz-size__answer">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field" />
+                <span class="custom-checkbox__content">менее 36</span>
+              </label>
+            </li>
+            <li class="quiz-size__answer">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field" />
+                <span class="custom-checkbox__content">36-38</span>
+              </label>
+            </li>
+            <li class="quiz-size__answer">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field" />
+                <span class="custom-checkbox__content">39-41</span>
+              </label>
+            </li>
+            <li class="quiz-size__answer">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field" />
+                <span class="custom-checkbox__content">42-44</span>
+              </label>
+            </li>
+            <li class="quiz-size__answer">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="custom-checkbox__field" />
+                <span class="custom-checkbox__content">45 и больше</span>
+              </label>
+            </li>
+          </ul>
+          <div class="quiz-size__media" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="quiz__footer">
+        <div class="quiz__footer-counter">
+          <span class="quiz__footer-qty">2</span>из<span
             class="quiz__footer-qty"
             >3</span
           >
