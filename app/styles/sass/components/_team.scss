@@ -1,0 +1,52 @@
+.team {
+  position: relative;
+  padding: $big-offset 0;
+  background-color: clr(east-color);
+
+  &__title {
+    margin-bottom: $main-offset;
+  }
+
+  &__list {
+    position: relative;
+    row-gap: $main-offset;
+    grid-auto-rows: minmax(480px, auto);
+    z-index: 2;
+  }
+  &__item {
+    grid-column: 4 span;
+    color: clr(white-color);
+
+    &-img {
+      @extend %d-block;
+      width: 380px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: $second-offset;
+    }
+
+    &-name {
+      @extend %d-block;
+      @extend %font-intro-bold;
+      font-size: fz(lg);
+      line-height: 1;
+      margin-bottom: $second-offset;
+    }
+
+    &-desc {
+      @extend %d-block;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @extend %d-block;
+    width: 540px;
+    height: 550px;
+    object-fit: cover;
+  }
+}
